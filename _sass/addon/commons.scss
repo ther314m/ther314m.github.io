@@ -1603,7 +1603,7 @@ $sidebar-display: "sidebar-display";
     }
 
     .sidebar-bottom {
-      padding-left: 3.5rem;
+      padding-left: unset;
       width: 100%;
 
       &.justify-content-center {
