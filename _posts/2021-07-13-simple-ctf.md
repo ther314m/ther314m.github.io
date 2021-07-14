@@ -66,8 +66,6 @@ PORT   STATE SERVICE REASON         VERSION
 
 Látjuk, hogy fut a `vsftpd 3.0.3` és be van kapcsolva az `Anonymous FTP login`, valamint fut a 80-as porton az `Apache httpd 2.4.18`.
 
-Tehát tudjuk, hogy a:
-
 ># Válasz: 2
 
 <hr>
