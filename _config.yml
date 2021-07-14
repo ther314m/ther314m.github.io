@@ -79,7 +79,7 @@ google_analytics:
 img_cdn: ''
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://valami.vk/avatar.png
+avatar: https://avatars.githubusercontent.com/u/87277616?s=400&u=de98e705cb796346abcb6985063b239559f47fcb&v=4
 
 # boolean type, the global switch for ToC in posts.
 toc: true
