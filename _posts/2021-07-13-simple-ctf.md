@@ -200,10 +200,10 @@ Kimenet:
 [+] Username found: mitch
 [+] Email found: admin@admin.com
 [+] Password found: 0c01f4468bd75d7a84c7eb73846e8d96
-[+] Password cracked: ******
+[+] Password cracked: s****t
 ~~~
 
-># Válasz: ******
+># Válasz: s****t
 
 <hr>
 
