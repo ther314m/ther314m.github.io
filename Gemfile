@@ -5,10 +5,11 @@ gem "jekyll-theme-chirpy", "~> 4.0", ">= 4.0.2"
 group :jekyll_plugins do
   # If you have any plugins, put them here!
   # gem "jekyll-xxx", "~> x.y"
+  gem 'jekyll-admin', group: :jekyll_plugins
 end
 
 group :test do
-  gem "html-proofer", "~> 3.18"
+#  gem "html-proofer", "~> 3.18"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
