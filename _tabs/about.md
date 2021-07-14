@@ -12,7 +12,7 @@ order: 4
 
 `CTF`-ek, `Writeup`-ok, `CVE`-k, `Hacking tutorial`-ok és `IT Security`.
 
-Elsősorban a saját fejlődésem érdekében készítem ezekben a  témákban a dokumentációkat, így viszont más is profitálhat belőle.
+Elsősorban a saját fejlődésem érdekében készítem ezekben a  témákban a dokumentációkat, így viszont más is profitálhat belőlük.
 
 <h1 style="color: #a9db92 ;"><b>Kapcsolat</b></h1>
 
