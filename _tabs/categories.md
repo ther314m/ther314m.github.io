@@ -1,6 +1,6 @@
 ---
 layout: categories
-title: Categories
+title: Kategóriák
 icon: fas fa-stream
 order: 1
 ---
