@@ -1,7 +1,7 @@
 ---
 title: ColddBox - Easy
 date: 2021-07-15 00:00:00 +0200
-categories: [Tryhackme, ColddBox]
+categories: [Tryhackme]
 tags: [Tryhackme, easy, CTF, C0lddBox ]  
 comments: false
 image:
