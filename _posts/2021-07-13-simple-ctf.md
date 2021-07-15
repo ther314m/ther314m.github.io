@@ -2,7 +2,7 @@
 title: Simple CTF - Beginner level ctf
 date: 2021-07-14 21:45:00 +0200
 categories: [Tryhackme]
-tags: [Tryhackme, CTF,easy]  
+tags: [Tryhackme, CTF, easy, Simple CTF]  
 comments: false
 pin: false
 image:
