@@ -118,7 +118,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 ===============================================================
 ~~~
 
-Itt is láthatjuk, hogy rengeteg `wp` előtagú mappa van a serveren. Egy kis tapasztalattal és általános ismerettel ebből következtethetünk, hogy ez egy `WordPress` site. Egyébként korábban mikor megnéztük az oldalt böngészőből, magából az oldal felépítéséből és kinézetéből is lehet már sejteni valamit. Találhatunk még valamit: A `/hidden` mappa elég érdekesnek tűnik nem?
+Itt is láthatjuk, hogy rengeteg `wp` előtagú mappa van a serveren. Egy kis tapasztalattal és általános ismerettel ebből következtethetünk, hogy ez egy `WordPress` site. Egyébként korábban mikor megnéztük az oldalt böngészőből, magából az oldal felépítéséből és kinézetéből is lehet már sejteni valamit. Találhatunk még valamit: A `/hidden` mappát. Túl sok mindent mondjuk nem találunk benne sajnos.
 
 <hr>
 
