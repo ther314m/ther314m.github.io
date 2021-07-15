@@ -4,7 +4,6 @@ date: 2021-07-15 00:00:00 +0200
 categories: [Tryhackme, ColddBox]
 tags: [Tryhackme, easy, CTF, C0lddBox ]  
 comments: false
-pin: false
 image:
   src: https://tryhackme-images.s3.amazonaws.com/room-icons/442c3b7bab5e3f52b5341cfa9e52e5c0.png
   alt: image alternative text
