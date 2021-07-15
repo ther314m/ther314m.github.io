@@ -4,7 +4,7 @@ date: 2021-07-14 21:45:00 +0200
 categories: [Tryhackme, Simple CTF]
 tags: [Tryhackme, CTF,easy]  
 comments: false
-pin: true
+pin: false
 image:
   src: https://tryhackme-images.s3.amazonaws.com/room-icons/f28ade2b51eb7aeeac91002d41f29c47.png
   alt: image alternative text
@@ -145,7 +145,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 ===============================================================
 ~~~
 
-Ami innen fontos nekünk az a `/simple` mappa. A `http://$IP/simple/` mögött tárolt alkalmazás egy `CMS` rendszer (CMS Made Simple 2.2.8 verzió). Számos biztonsági rés létezik, de a legfontosabb a <a href="https://www.cvedetails.com/cve/CVE-2019-9053/">`CVE-2019-9053`</a>.
+Ami innen fontos nekünk az a `/simple` mappa. A `http://$IP/simple/` mögött tárolt alkalmazás egy `CMS` rendszer (`CMS Made Simple 2.2.8 verzió`). Számos biztonsági rés létezik, de a legfontosabb a <a href="https://www.cvedetails.com/cve/CVE-2019-9053/">`CVE-2019-9053`</a>.
 ># válasz: CVE-2019-9053
 
 <hr>
