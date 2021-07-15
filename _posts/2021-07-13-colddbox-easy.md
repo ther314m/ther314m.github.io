@@ -48,6 +48,6 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 [...]
 ~~~
 
-Láthatjuk, hogy egy `Apache httpd 2.4.18` webserver fut a 80-as porton és egy `OpenSSH` kiszolgáló a 4512-es porton.
+Láthatjuk, hogy egy `Apache httpd 2.4.18` webserver fut a 80-as porton és egy `OpenSSH` kiszolgáló a 4512-es porton. Ha a colddbox-os `IP`-re látogatunk, akkor láthatjuk, hogy ez egy `WordPress` site:
 
-<img src="https://ther314m.github.io/assets/img/favicons/myimages/01.png" alt="The flower">
+![image tooltip here](/assets/myimages/01.png)
