@@ -381,7 +381,7 @@ cat: user.txt: Permission denied
 www-data@ColddBox-Easy:/home/c0ldd$ 
 ~~~
 
-Próbáljunk meg valahogy belépni egy nem `rendszer-felhasználóval`, `c0ldd` esetleg `root`.
+Próbáljunk meg valahogy belépni egy NEM `rendszer-felhasználó`-val, `c0ldd` esetleg `root`.
 
 Keressünk `binárisokat` a `suid` bitkészlettel. 
 >Ez lehetővé teszi, hogy a root tulajdonában lévő bináris fájlokat futtassuk rootként, a `sudo` használata nélkül
