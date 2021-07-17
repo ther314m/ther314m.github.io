@@ -219,7 +219,7 @@ Ezeket a hitelesítő adatokat használhatjuk az `ssh` (2222-es porton futó) be
 <h1 style="color: #a9db92 ;"><b>7 - What’s the user flag?</b></h1>
 >7 - Mi a user flag?
 
-Jelen esetben az `sshpass` nevű programot fogom segítségül hívni a sima `ssh`-hez. Ha neked nincs fent az `sshpass` akkor se csüggedj, apt-on fent van, tehát:
+Jelen esetben az `sshpass` nevű programot fogom segítségül hívni a sima `ssh`-hez. Ha neked nincs fent az `sshpass` akkor se csüggedj, `apt`-on fent van, tehát:
 
 ~~~bash
 sudo apt-get update -y; sudo apt-get install sshpass -y
@@ -257,13 +257,13 @@ drwxr-x--- 16 sunbath sunbath 4096 aug 19  2019 sunbath
 <h1 style="color: #a9db92 ;"><b>9 - What can you leverage to spawn a privileged shell?</b></h1>
 > 9 - Mit tud kihasználni egy privilegizált shell létrehozására? 
 
-Amikor csatlakozunk, úgy tűnik, hogy van egy testreszabott shellünk (pl. Nincs TAB befejezés). Ezt egyébként könnyű megkerülni:
+Amikor csatlakozunk, úgy tűnik, hogy van egy interaktív shellünk, de ez nem egy teljes értékű shell. (pl. Nincs TAB befejezés, nem tudunk nyilakat használni stb.). Ezt egyébként könnyű megkerülni:
 
 ~~~bash
 mitch@Machine:~$ python -c 'import pty; pty.spawn("/bin/bash")'
 ~~~
 
-Most van egy igazi shellünk! Lássuk, van-e sudo hozzáférésünk:
+Most van egy többé-kevésbé normalizált shellünk! Lássuk, mit tudunk futtatni `root`-ként, sudo nélkül:
 
 ~~~bash
 mitch@Machine:~$ sudo -l
@@ -278,7 +278,7 @@ mitch@Machine:/home$ sudo vim
 ~~~
 
 
-Most a `vim`-ben írd be: `:shell` és `ENTER`. Hoppá! Van egy héjad `root` jogokkal! 
+Most futtassuk a `vim`-et, és kezdjük el gépelni a következőket: `:shell` és `ENTER`. Hoppá! Van egy héjad `root` jogokkal! 
 
 ># Válasz: vim
 
@@ -287,7 +287,7 @@ Most a `vim`-ben írd be: `:shell` és `ENTER`. Hoppá! Van egy héjad `root` jo
 <h1 style="color: #a9db92 ;"><b>What's the root flag?</b></h1>
 >Mi a root flag?
 
-Ezt könnyen kideríthetjük már:
+Ezt könnyen kideríthetjük:
 
 ~~~bash
 root@Machine:/home# cd /root/
