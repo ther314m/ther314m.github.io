@@ -314,7 +314,8 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2021-07-15 22:24:
 
 Innen már egyszerű dolgunk van:
 
-A `twentyfifteen` sablon `404.php` nevű fájljának teljes tartalmát kicseréljük egy PHP fordított shell forrására, és mentjük a módosításokat. Ajánlom a `Pentest Monkey` Reverse Shell Cheat Sheet-eket: <a href="https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php">`Pentest Monkey - PHP Reverse Shell Cheat Sheet`</a>. Mivel a Wordpress `PHP`-ban íródott, nekünk is értelemszerűen ilyen `reverse shell`-t kell választanunk.
+A `twentyfifteen` sablon `404.php` nevű fájljának teljes tartalmát kicseréljük egy PHP fordított shell forrására, és mentjük a módosításokat. Ajánlom a `Pentest Monkey` Reverse Shell Cheat Sheet-eket:
+<a href="https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php">`Pentest Monkey - PHP Reverse Shell Cheat Sheet`</a>. Mivel a Wordpress `PHP`-ban íródott, nekünk is értelemszerűen ilyen `reverse shell`-t kell választanunk.
 
 Kicsit módosítjuk a fájlt:
 
