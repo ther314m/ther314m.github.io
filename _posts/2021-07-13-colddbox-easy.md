@@ -314,7 +314,7 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2021-07-15 22:24:
 
 Innen már egyszerű dolgunk van:
 
-A `twentfifteen` sablon `404.php` nevű fájljának teljes tartalmát kicseréljük egy PHP fordított shell forrására, és mentjük a módosításokat. Ajánlom a `Pentest Monkey` Reverse Shell Cheat Sheet-eket: <a href="https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php">`Pentest Monkey - PHP Reverse Shell Cheat Sheet`</a>. Mivel a wordpress `PHP`-ban íródott, nekünk is értelemszerűen ilyen `reverse shell`-t kell választanunk.
+A `twentyfifteen` sablon `404.php` nevű fájljának teljes tartalmát kicseréljük egy PHP fordított shell forrására, és mentjük a módosításokat. Ajánlom a `Pentest Monkey` Reverse Shell Cheat Sheet-eket: <a href="https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php">`Pentest Monkey - PHP Reverse Shell Cheat Sheet`</a>. Mivel a Wordpress `PHP`-ban íródott, nekünk is értelemszerűen ilyen `reverse shell`-t kell választanunk.
 
 Kicsit módosítjuk a fájlt:
 
@@ -324,14 +324,14 @@ Kicsit módosítjuk a fájlt:
 Felülírjuk a `404.php` fájlt az admin page-en.
 
 
- Ezután nyitunk egy `netcat` "figyelőt" és elkezdünk "hallgatózni" a `reverse shell`-ben megadott porton, majd megnyitom böngészővel a 404.php oldalon (http://<Tryhackme-room-ip>/wp-content/themes/twentyfifteen/404.php). 
+ Ezután nyitunk egy `netcat` "figyelőt" és elkezdünk "hallgatózni" a `reverse shell`-ben megadott porton, majd megnyitjuk böngészővel a 404.php oldalt. (http://<Tryhackme-room-ip>/wp-content/themes/twentyfifteen/404.php). 
 
 
 ~~~bash
 nc -lvnp 4444
 ~~~
 
-Miután megnyitjuk a fájlt, egy `reverse shell` fogad bennünket. Ez nem egy teljes értékű `shell`, nem tudunk "`TAB`-olni" és a `clear` parancs sem működik többek között. Eléggé korlátozottak így a lehetőségeink, nem biztos, hogy szükségünk lesznek ezekre a funkciókra, de javallott az alkalmazásuk.
+Miután visszatekintünk a terminálunkra, egy `reverse shell` fogad bennünket. Ez nem egy teljes értékű `shell`, nem látjuk hol tartózkodunk a fájlrendszerben, nem tudunk "`TAB`-olni" és a `clear` parancs sem működik többek között. Eléggé korlátozottak így a lehetőségeink, nem biztos, hogy szükségünk lesznek ezekre a funkciókra, de javallott a shell `normalizálása`.
 
 ![image tooltip here](/assets/myimages/07.png)
 
